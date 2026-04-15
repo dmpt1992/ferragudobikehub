@@ -234,3 +234,15 @@ section {
 .hero {
   min-height: 420px;
 }
+
+
+.footer {
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 13px;
+  color: #777;
+}
+
+.footer p {
+  margin: 0;
+}
