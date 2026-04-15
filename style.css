@@ -34,23 +34,20 @@ section {
 .hero {
   position: relative;
   height: 460px;
+  min-height: 420px;
   background-size: cover;
   background-position: center;
   border-radius: 20px;
   max-width: 1200px;
   margin: 20px auto;
   overflow: hidden;
-   min-height: 420px;
 }
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: rgba(0,0,0,0.45);
-  border-radius: 20px; /* IMPORTANTE */
+  border-radius: 20px;
 }
 
 .hero-content {
@@ -114,11 +111,10 @@ section {
 /* CARDS */
 .cards-inner {
   display: flex;
-  flex-direction: column; /* 🔥 chave para mobile */
   gap: 20px;
-  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-
 
 .card {
   background: white;
@@ -160,15 +156,19 @@ section {
 .light { background: #5fa89b; }
 .dark { background: #243c3a; }
 
-/* FLOAT */
+/* WHATSAPP */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #25d366;
-  color: white;
-  padding: 14px;
+  background: #25D366;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 /* ANIMATIONS */
@@ -188,20 +188,15 @@ section {
   to { opacity: 1; transform: translateY(0); }
 }
 
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  width: 55px;
-  height: 55px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 13px;
+  color: #777;
 }
 
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
   .hero {
@@ -233,20 +228,10 @@ section {
     width: 100%;
     text-align: center;
   }
-}
 
-.hero {
-  min-height: 420px;
-}
-
-
-.footer {
-  text-align: center;
-  padding: 30px 20px;
-  font-size: 13px;
-  color: #777;
-}
-
-.footer p {
-  margin: 0;
+  /* 👇 cards em coluna só em mobile */
+  .cards-inner {
+    flex-direction: column;
+    align-items: center;
+  }
 }
