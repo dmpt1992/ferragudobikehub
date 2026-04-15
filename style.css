@@ -9,21 +9,25 @@ body {
   color: #2b2b2b;
 }
 
+/* TYPOGRAPHY */
 h1, h2, h3 {
   text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
-h1 {
-  letter-spacing: 2px;
+h1 { letter-spacing: 2px; }
+h2 { letter-spacing: 1.5px; }
+h3 { letter-spacing: 1px; }
+
+/* GLOBAL SPACING */
+section {
+  margin: 40px 0;
 }
 
-h2 {
-  letter-spacing: 1.5px;
-}
-
-h3 {
-  letter-spacing: 1px;
+/* CONTAINER */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* HERO */
@@ -33,14 +37,13 @@ h3 {
   background-size: cover;
   background-position: center;
   border-radius: 20px;
-  margin: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
   overflow: hidden;
 }
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.45);
@@ -60,10 +63,6 @@ h3 {
   font-weight: 600;
 }
 
-.hero p {
-  opacity: 0.9;
-}
-
 /* BUTTONS */
 .btn {
   padding: 12px 22px;
@@ -80,10 +79,6 @@ h3 {
   color: black;
 }
 
-.primary:hover {
-  transform: translateY(-2px);
-}
-
 .outline {
   border: 2px solid white;
   color: white;
@@ -94,21 +89,11 @@ h3 {
   color: #333;
 }
 
-.outline:hover {
-  background: white;
-  color: black;
-}
-
-.ghost {
-  color: #00a884;
-}
-
 /* WHAT */
 .what {
   background: white;
-  margin: 20px;
-  padding: 35px;
   border-radius: 20px;
+  padding: 35px;
 }
 
 .tags span {
@@ -119,39 +104,25 @@ h3 {
   font-size: 14px;
 }
 
-.ok {
-  background: #e6f7f0;
-}
-
-.no {
-  background: #ffecec;
-}
+.ok { background: #e6f7f0; }
+.no { background: #ffecec; }
 
 /* CARDS */
 .cards-inner {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card {
   background: white;
   flex: 1;
+  max-width: 480px;
   min-width: 300px;
   padding: 28px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.subtitle {
-  opacity: 0.6;
-  font-size: 14px;
-  margin-bottom: 15px;
 }
 
 .card ul {
@@ -171,24 +142,21 @@ h3 {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .cta-box {
   flex: 1;
+  max-width: 480px;
   padding: 35px;
   border-radius: 20px;
   color: white;
 }
 
-.light {
-  background: #5fa89b;
-}
+.light { background: #5fa89b; }
+.dark { background: #243c3a; }
 
-.dark {
-  background: #243c3a;
-}
-
-/* FLOAT BUTTON */
+/* FLOAT */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
@@ -197,8 +165,6 @@ h3 {
   color: white;
   padding: 14px;
   border-radius: 50%;
-  font-size: 20px;
-  text-decoration: none;
 }
 
 /* ANIMATIONS */
@@ -210,24 +176,10 @@ h3 {
 .fade.show {
   opacity: 1;
   transform: translateY(0);
-  transition: all 0.8s ease;
+  transition: 0.8s;
 }
 
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-  max-width: 1000px;
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
 }
