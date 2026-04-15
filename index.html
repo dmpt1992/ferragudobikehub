@@ -1,117 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ferragudo Bike Hub</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <title>Bike Rentals Algarve | Ferragudo Bikes</title>
+  <meta name="description" content="Bike rentals in the Algarve. MTB, city, trekking, gravel, racing, fat bikes and electric/non-electric bikes in Ferragudo. Everything included. Delivery available. Self-guided bike tours." />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Satellite domain: avoid competing with the main site -->
+  <link rel="canonical" href="https://flowferragudo.pt/rent/bicycles/" />
+
+  <!-- Font (Lovelo-like) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- (Optional) manifest if you use it -->
+  <!-- <link rel="manifest" href="/site.webmanifest"> -->
 </head>
 
 <body>
 
-<!-- HERO -->
-<section class="hero" style="background-image: url('https://flowferragudo.pt/wp-content/uploads/2024/02/WhatsApp-Image-2025-08-02-at-14.56.19-3.jpeg');">
-  <div class="overlay"></div>
+  <!-- HERO -->
+  <header class="hero" role="banner" aria-label="Ferragudo Bikes - Bike Rentals Algarve">
+    <div class="overlay" aria-hidden="true"></div>
 
-  <div class="hero-content">
-    <h1>Ferragudo Bike Hub</h1>
-    <p>Quick essentials & basic support — not a full workshop.</p>
+    <div class="hero-inner">
+      <div class="badge">FERRAGUDO • ALGARVE</div>
 
-    <div class="hero-buttons">
-      <a href="#essentials" class="btn primary">See essentials & prices</a>
-      <a href="https://wa.me/351925392982" target="_blank" class="btn outline">WhatsApp</a>
+      <h1>BIKE RENTALS IN ALGARVE.</h1>
+
+      <p class="subtitle">
+        MTB, CITY, TREKKING, GRAVEL, RACING, FAT BIKES &amp; ELECTRIC / NON-ELECTRIC BIKES.<br>
+        EVERYTHING INCLUDED. DELIVERY &amp; PICK-UP AVAILABLE.
+      </p>
+
+<a class="btn" href="https://flowferragudo.pt/rent/bicycles/" rel="noopener">
+  <span class="btn-ico" aria-hidden="true">
+    <!-- calendar icon -->
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+      <path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1.5A2.5 2.5 0 0 1 22 6.5v13A2.5 2.5 0 0 1 19.5 22h-15A2.5 2.5 0 0 1 2 19.5v-13A2.5 2.5 0 0 1 4.5 4H6V3a1 1 0 0 1 1-1Zm12.5 8h-15v9.5c0 .276.224.5.5.5h14c.276 0 .5-.224.5-.5V10ZM19.5 6h-15a.5.5 0 0 0-.5.5V8h16V6.5a.5.5 0 0 0-.5-.5Z"/>
+    </svg>
+  </span>
+
+  BOOK NOW
+</a>
+
+
+        <a class="btn btn-outline"
+           href="https://flowferragudo.pt/tours/self-guided-tours/self-guided-bike-tour-algarve/"
+           rel="noopener">
+          SELF-GUIDED TOURS
+        </a>
+      </div>
+
+      <p class="micro">
+        LOCAL TEAM BASED IN FERRAGUDO • EASY ONLINE BOOKING • RIDE AT YOUR OWN PACE.
+      </p>
+
+      <!-- SCROLL INDICATOR -->
+      <a class="scroll-cue" href="#content" aria-label="Scroll to content">
+        <span class="scroll-cue__mouse" aria-hidden="true"></span>
+        <span class="scroll-cue__arrow" aria-hidden="true"></span>
+      </a>
     </div>
-  </div>
-</section>
 
-<!-- WHAT -->
-<section class="what fade">
-  <h2>What we do</h2>
-  <p>
-    We’re here for the essentials that keep you rolling — tubes, locks, pumps and quick fixes.
-    <strong>We are not a full repair workshop.</strong>
-  </p>
+    <div class="hero-fade" aria-hidden="true"></div>
+  </header>
 
-  <div class="tags">
-    <span class="ok">✔ Essentials & accessories</span>
-    <span class="ok">✔ Tube replacement</span>
-    <span class="no">✖ Full servicing</span>
-    <span class="no">✖ Complex repairs</span>
-    <span class="no">✖ E-bike diagnostics</span>
-  </div>
-</section>
+  <!-- Anchor target for the scroll cue -->
+  <div id="content"></div>
 
-<!-- CARDS -->
-<section class="cards fade" id="essentials">
+  <main class="main">
 
-  <div class="card">
-    <h3>Bike Essentials</h3>
-    <p class="subtitle">Must-haves available in shop.</p>
+    <!-- EVERYTHING INCLUDED -->
+    <section class="section" aria-label="Everything included">
+      <div class="container">
+        <h2>EVERYTHING YOU NEED TO RIDE.</h2>
+        <p class="lead">
+          PREMIUM BIKES + LOCAL SUPPORT. SIMPLE, TRANSPARENT RENTALS — READY TO GO.
+        </p>
 
-    <ul>
-      <li><span>Inner tube</span><strong>6€</strong></li>
-      <li><span>Inner tube fat tire (20 x 4”)</span><strong>15€</strong></li>
-      <li><span>Code lock</span><strong>7€</strong></li>
-      <li><span>U-lock</span><strong>18€</strong></li>
-      <li><span>Cycling bottle (650 ml)</span><strong>6€</strong></li>
-      <li><span>Air pump</span><strong>5€</strong></li>
-      <li><span>Handlebar phone bag</span><strong>7€</strong></li>
-      <li><span>Multi tools kit</span><strong>8€</strong></li>
-    </ul>
-  </div>
+        <ul class="grid features">
+          <li class="card">
+            <h3>ALL INCLUDED.</h3>
+            <p>HELMET, LOCK &amp; PHONE HOLDER INCLUDED IN EVERY RENTAL.</p>
+          </li>
 
-  <div class="card">
-    <h3>Keep Rolling Services</h3>
-    <p class="subtitle">Quick services to get you back on the road.</p>
+          <li class="card">
+            <h3>DELIVERY SERVICE.</h3>
+            <p>DELIVERY &amp; PICK-UP AVAILABLE IN FERRAGUDO AND NEARBY AREAS.</p>
+          </li>
 
-    <ul>
-      <li><span>Inner tube replacement</span><strong>10€</strong></li>
-      <li><span>Inner tube replacement (e-bike)</span><strong>15€</strong></li>
-    </ul>
+          <li class="card">
+            <h3>SELF-GUIDED ROUTES.</h3>
+            <p>FREE CURATED ROUTES TO EXPLORE THE ALGARVE WITH YOUR SMARTPHONE.</p>
+          </li>
 
-    <div class="card-buttons">
-      <a href="https://wa.me/351925392982" target="_blank" class="btn ghost">WhatsApp</a>
-      <a href="https://maps.app.goo.gl/8ejUeDb8JJMzEpi79" target="_blank" class="btn outline dark-outline">Directions</a>
-    </div>
-  </div>
+          <li class="card">
+            <h3>LOCAL SUPPORT.</h3>
+            <p>WE’RE HERE IN FERRAGUDO — HELP, TIPS AND RECOMMENDATIONS ANYTIME.</p>
+          </li>
+        </ul>
 
-</section>
+        <div class="center">
+          <a class="btn" href="https://flowferragudo.pt/rent/bicycles/" rel="noopener">
+            CHECK AVAILABILITY
+          </a>
+        </div>
+      </div>
+    </section>
 
-<!-- CTA -->
-<section class="cta fade">
+    <!-- BIKE RANGE -->
+    <section class="section alt" aria-label="Bike range">
+      <div class="container">
+        <h2>OUR BIKE RANGE.</h2>
+        <p class="lead">
+          CHOOSE THE PERFECT BIKE FOR YOUR ROUTE — SHORT RIDES, LONG DAYS, COAST OR COUNTRYSIDE.
+        </p>
 
-  <div class="cta-box light">
-    <h3>Need a quick essential?</h3>
-    <p>Pop by — we’ll help you get rolling again.</p>
+        <div class="grid bikes">
+          <div class="card">
+            <h3>MTB &amp; E-MTB.</h3>
+            <p>TRAILS, HILLS AND FUN RIDES — WITH OR WITHOUT ELECTRIC ASSIST.</p>
+          </div>
 
-    <div>
-      <a href="https://maps.app.goo.gl/8ejUeDb8JJMzEpi79" target="_blank" class="btn primary">Directions</a>
-      <a href="https://wa.me/351925392982" target="_blank" class="btn outline">WhatsApp</a>
-    </div>
-  </div>
+          <div class="card">
+            <h3>CITY &amp; TREKKING.</h3>
+            <p>COMFORTABLE BIKES FOR VILLAGE RIDES, BEACH DAYS AND EASY EXPLORING.</p>
+          </div>
 
-  <div class="cta-box dark">
-    <h3>Looking for rentals or tours?</h3>
-    <p>Use the buttons below.</p>
+          <div class="card">
+            <h3>GRAVEL &amp; RACING.</h3>
+            <p>FAST, EFFICIENT AND PERFECT FOR LONGER DISTANCES.</p>
+          </div>
 
-    <div>
-      <a href="https://flowferragudo.pt/rent/bicycles/" class="btn primary">Rentals</a>
-      <a href="https://flowferragudo.pt/tours/" class="btn outline">Tours</a>
-    </div>
-  </div>
+          <div class="card">
+            <h3>FAT BIKES.</h3>
+            <p>STABLE AND FUN — GREAT FOR SANDIER AREAS AND A UNIQUE RIDE.</p>
+          </div>
 
-</section>
+          <div class="card">
+            <h3>E-BIKES.</h3>
+            <p>GO FURTHER WITH LESS EFFORT — IDEAL FOR EXPLORING MORE OF THE ALGARVE.</p>
+          </div>
 
-<!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/351925392982" class="whatsapp-float" target="_blank">💬</a>
+          <div class="card">
+            <h3>NON-ELECTRIC BIKES.</h3>
+            <p>CLASSIC, SIMPLE AND RELIABLE — GREAT VALUE FOR EVERYDAY RIDES.</p>
+          </div>
+        </div>
 
-<!-- JS -->
-<script src="script.js"></script>
+        <div class="center">
+          <a class="btn" href="https://flowferragudo.pt/rent/bicycles/" rel="noopener">
+            BOOK YOUR BIKE
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELF GUIDED TOURS -->
+    <section class="section" id="routes" aria-label="Self-guided tours and routes">
+      <div class="container">
+        <h2>SELF-GUIDED BIKE TOURS IN ALGARVE.</h2>
+        <p class="lead">
+          RIDE AT YOUR OWN PACE WITH CURATED ROUTES — COASTAL VIEWS, COUNTRYSIDE ROADS AND LOCAL VILLAGES.
+        </p>
+
+        <div class="chips" role="list" aria-label="Route themes">
+          <span class="chip" role="listitem">COASTAL RIDE</span>
+          <span class="chip" role="listitem">FERRAGUDO &amp; PORTIMÃO</span>
+          <span class="chip" role="listitem">BENAGIL &amp; SEA CLIFFS</span>
+          <span class="chip" role="listitem">CARVOEIRO</span>
+          <span class="chip" role="listitem">ALVOR</span>
+          <span class="chip" role="listitem">SILVES</span>
+          <span class="chip" role="listitem">COUNTRYSIDE LOOP</span>
+        </div>
+
+        <div class="route-box">
+          <h3>WHAT YOU GET.</h3>
+          <ul class="ticks">
+            <li>FREE ROUTE RECOMMENDATIONS FOR DIFFERENT LEVELS.</li>
+            <li>EASY NAVIGATION ON YOUR SMARTPHONE.</li>
+            <li>LOCAL TIPS: VIEWPOINTS, COFFEE STOPS AND HIDDEN SPOTS.</li>
+          </ul>
+        </div>
+
+        <div class="center">
+          <a class="btn"
+             href="https://flowferragudo.pt/tours/self-guided-tours/self-guided-bike-tour-algarve/"
+             rel="noopener">
+            VIEW SELF-GUIDED TOURS
+          </a>
+        </div>
+
+        <p class="seo-text">
+          LOOKING FOR <strong>BIKE RENTALS IN THE ALGARVE</strong>? FERRAGUDO BIKES HELPS YOU RENT THE RIGHT BIKE AND EXPLORE THE REGION WITH
+          <strong>SELF-GUIDED TOURS</strong>, <strong>DELIVERY SERVICE</strong> AND <strong>EVERYTHING INCLUDED</strong>.
+        </p>
+      </div>
+    </section>
+
+    <!-- FOOTER (SMART) -->
+    <footer class="footer" aria-label="Footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <p class="footer-brand">FERRAGUDO BIKES • ALGARVE.</p>
+          <p class="footer-note">BIKE &amp; E-BIKE RENTALS • DELIVERY AVAILABLE • SELF-GUIDED TOURS.</p>
+        </div>
+
+        <div class="footer-right">
+          <a class="footer-link" href="https://flowferragudo.pt/rent/bicycles/" rel="noopener">RENTALS</a>
+          <a class="footer-link" href="https://flowferragudo.pt/tours/self-guided-tours/self-guided-bike-tour-algarve/" rel="noopener">SELF-GUIDED TOURS</a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+<!-- FLOATING WHATSAPP BUTTON -->
+<a class="wa-float"
+   href="https://wa.me/351925392982"
+   target="_blank"
+   rel="noopener"
+   aria-label="Chat on WhatsApp">
+  <span class="wa-float__ico" aria-hidden="true">
+    <svg viewBox="0 0 32 32" width="22" height="22" fill="currentColor" aria-hidden="true">
+      <path d="M19.11 17.44c-.27-.14-1.58-.78-1.83-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.18-1.35-.8-.71-1.35-1.6-1.51-1.87-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.48-.83-2.03-.22-.52-.45-.45-.61-.46l-.52-.01c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29 0 1.35.99 2.66 1.13 2.84.14.18 1.95 2.98 4.73 4.18.66.29 1.18.46 1.58.59.66.21 1.26.18 1.74.11.53-.08 1.58-.65 1.8-1.28.22-.63.22-1.17.16-1.28-.07-.11-.25-.18-.52-.32zM16.02 27.5h-.01c-1.96 0-3.89-.53-5.58-1.53l-.4-.24-3.92 1.03 1.05-3.82-.26-.41a11.5 11.5 0 0 1-1.77-6.11C5.15 10.1 10.1 5.15 16.16 5.15c2.93 0 5.68 1.14 7.75 3.21a10.88 10.88 0 0 1 3.2 7.75c0 6.06-4.95 11.39-11.09 11.39zm9.78-20.61A13.32 13.32 0 0 0 16.16 3.9C9.42 3.9 3.94 9.38 3.94 16.12c0 2.35.66 4.64 1.9 6.62L3.9 29.86l7.28-1.91c1.92 1.05 4.1 1.61 6.33 1.61h.01c6.74 0 12.55-5.7 12.55-12.44 0-3.44-1.34-6.68-3.77-9.1z"/>
+    </svg>
+  </span>
+  <span class="wa-float__txt">WhatsApp</span>
+</a>
 
 </body>
 </html>
