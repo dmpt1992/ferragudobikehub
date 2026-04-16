@@ -101,17 +101,18 @@ section {
   color: #00a884;
 }
 
-/* WHAT */
+/* WHAT CARD */
 .what {
-  background: white;
-  border-radius: 20px;
-  padding: 35px 0;
+  background: transparent;
 }
 
 .what .container {
-  padding: 0 35px;
+  background: white;
+  border-radius: 20px;
+  padding: 35px;
 }
 
+/* TAGS */
 .tags {
   margin-top: 18px;
 }
@@ -141,14 +142,14 @@ section {
 }
 
 .cards-inner > .card {
-  flex: 1 1 0;
+  flex: 1 1 calc(50% - 10px);
   min-width: 0;
 }
 
 .card {
   background: white;
   width: 100%;
-  padding: 28px;
+  padding: 35px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
@@ -188,7 +189,7 @@ section {
 }
 
 .cta-box {
-  flex: 1 1 0;
+  flex: 1 1 calc(50% - 10px);
   min-width: 0;
   padding: 35px;
   border-radius: 20px;
@@ -256,10 +257,19 @@ section {
 
 /* MOBILE */
 @media (max-width: 768px) {
+  section {
+    margin: 28px 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
   .hero {
     height: auto;
     min-height: unset;
     padding: 80px 20px;
+    margin: 16px;
   }
 
   .hero-content {
@@ -288,17 +298,17 @@ section {
     margin: 0;
   }
 
-  .what {
-    padding: 28px 0;
-  }
-
-  .what .container {
-    padding: 0 24px;
+  .what .container,
+  .card,
+  .cta-box {
+    padding: 30px;
+    border-radius: 20px;
   }
 
   .cards-inner,
   .cta-inner {
     flex-direction: column;
+    gap: 20px;
   }
 
   .cards-inner > .card,
