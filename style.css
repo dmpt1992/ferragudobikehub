@@ -12,13 +12,14 @@ body {
 /* TYPOGRAPHY */
 h1, h2, h3 {
   text-transform: uppercase;
+  margin-top: 0;
 }
 
 h1 { letter-spacing: 2px; }
 h2 { letter-spacing: 1.5px; }
 h3 { letter-spacing: 1px; }
 
-/* GLOBAL */
+/* GLOBAL SPACING */
 section {
   margin: 40px 0;
 }
@@ -46,7 +47,7 @@ section {
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0, 0, 0, 0.45);
   border-radius: 20px;
 }
 
@@ -57,11 +58,17 @@ section {
   top: 50%;
   transform: translateY(-50%);
   animation: fadeUp 1s ease forwards;
+  padding: 0 20px;
 }
 
 .hero h1 {
   font-size: 44px;
   font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  margin-bottom: 20px;
 }
 
 /* BUTTONS */
@@ -90,12 +97,23 @@ section {
   color: #333;
 }
 
+.ghost {
+  color: #00a884;
+}
+
 /* WHAT */
 .what {
   background: white;
   border-radius: 20px;
-  padding: 35px;
-  margin: 0 20px;
+  padding: 35px 0;
+}
+
+.what .container {
+  padding: 0 35px;
+}
+
+.tags {
+  margin-top: 18px;
 }
 
 .tags span {
@@ -106,20 +124,25 @@ section {
   font-size: 14px;
 }
 
-.ok { background: #e6f7f0; }
-.no { background: #ffecec; }
-
-/* CARDS */
-.cards {
-  padding: 0 20px;
+.ok {
+  background: #e6f7f0;
 }
 
+.no {
+  background: #ffecec;
+}
+
+/* CARDS */
 .cards-inner {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   gap: 20px;
-  max-width: 900px;
-  margin: 0 auto;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.cards-inner > .card {
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .card {
@@ -127,19 +150,33 @@ section {
   width: 100%;
   padding: 28px;
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
 .card ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .card li {
   display: flex;
   justify-content: space-between;
+  gap: 16px;
   padding: 12px 0;
   border-bottom: 1px dashed #ddd;
+}
+
+.card li span {
+  flex: 1;
+}
+
+.card li strong {
+  white-space: nowrap;
+}
+
+.card-buttons {
+  margin-top: 22px;
 }
 
 /* CTA */
@@ -147,19 +184,24 @@ section {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  justify-content: center;
+  align-items: stretch;
 }
 
 .cta-box {
-  flex: 1;
-  max-width: 480px;
+  flex: 1 1 0;
+  min-width: 0;
   padding: 35px;
   border-radius: 20px;
   color: white;
 }
 
-.light { background: #5fa89b; }
-.dark { background: #243c3a; }
+.light {
+  background: #5fa89b;
+}
+
+.dark {
+  background: #243c3a;
+}
 
 /* WHATSAPP */
 .whatsapp-float {
@@ -173,7 +215,8 @@ section {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  z-index: 999;
 }
 
 /* FOOTER */
@@ -182,6 +225,10 @@ section {
   padding: 30px 20px;
   font-size: 13px;
   color: #777;
+}
+
+.footer p {
+  margin: 0;
 }
 
 /* ANIMATIONS */
@@ -209,9 +256,9 @@ section {
 
 /* MOBILE */
 @media (max-width: 768px) {
-
   .hero {
     height: auto;
+    min-height: unset;
     padding: 80px 20px;
   }
 
@@ -238,9 +285,36 @@ section {
   .btn {
     width: 100%;
     text-align: center;
+    margin: 0;
   }
 
-  .cards-inner {
-    grid-template-columns: 1fr;
+  .what {
+    padding: 28px 0;
+  }
+
+  .what .container {
+    padding: 0 24px;
+  }
+
+  .cards-inner,
+  .cta-inner {
+    flex-direction: column;
+  }
+
+  .cards-inner > .card,
+  .cta-box {
+    flex: unset;
+    width: 100%;
+  }
+
+  .card li {
+    align-items: flex-start;
+  }
+
+  .whatsapp-float {
+    bottom: 16px;
+    right: 16px;
+    width: 54px;
+    height: 54px;
   }
 }
