@@ -18,7 +18,7 @@ h1 { letter-spacing: 2px; }
 h2 { letter-spacing: 1.5px; }
 h3 { letter-spacing: 1px; }
 
-/* GLOBAL SPACING */
+/* GLOBAL */
 section {
   margin: 40px 0;
 }
@@ -95,6 +95,7 @@ section {
   background: white;
   border-radius: 20px;
   padding: 35px;
+  margin: 0 20px;
 }
 
 .tags span {
@@ -109,17 +110,21 @@ section {
 .no { background: #ffecec; }
 
 /* CARDS */
+.cards {
+  padding: 0 20px;
+}
+
 .cards-inner {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .card {
   background: white;
   width: 100%;
-  max-width: 480px;
   padding: 28px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.05);
@@ -171,6 +176,14 @@ section {
   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 13px;
+  color: #777;
+}
+
 /* ANIMATIONS */
 .fade {
   opacity: 0;
@@ -184,19 +197,17 @@ section {
 }
 
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* FOOTER */
-.footer {
-  text-align: center;
-  padding: 30px 20px;
-  font-size: 13px;
-  color: #777;
-}
-
-/* ================= MOBILE ================= */
+/* MOBILE */
 @media (max-width: 768px) {
 
   .hero {
@@ -229,9 +240,7 @@ section {
     text-align: center;
   }
 
-  /* 👇 cards em coluna só em mobile */
   .cards-inner {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
   }
 }
