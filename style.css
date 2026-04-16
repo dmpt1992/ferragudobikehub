@@ -71,15 +71,25 @@ section {
   margin-bottom: 20px;
 }
 
+/* BUTTON GROUPS */
+.hero-buttons,
+.card-buttons,
+.cta-box div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 /* BUTTONS */
 .btn {
   padding: 12px 22px;
   border-radius: 12px;
   text-decoration: none;
-  margin: 6px;
   display: inline-block;
   font-weight: 500;
   transition: all 0.3s ease;
+  margin: 0;
+  text-align: center;
 }
 
 .primary {
@@ -152,12 +162,16 @@ section {
   padding: 35px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  flex-grow: 1;
 }
 
 .card li {
@@ -194,6 +208,9 @@ section {
   padding: 35px;
   border-radius: 20px;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .light {
@@ -204,7 +221,7 @@ section {
   background: #243c3a;
 }
 
-/* WHATSAPP */
+/* WHATSAPP FLOAT */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
@@ -284,18 +301,6 @@ section {
 
   .hero p {
     font-size: 14px;
-  }
-
-  .hero-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .btn {
-    width: 100%;
-    text-align: center;
-    margin: 0;
   }
 
   .what .container,
