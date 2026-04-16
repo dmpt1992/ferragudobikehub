@@ -74,7 +74,7 @@ section {
 /* BUTTON GROUPS */
 .hero-buttons,
 .card-buttons,
-.cta-box div {
+.cta-actions {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -143,28 +143,24 @@ section {
   background: #ffecec;
 }
 
-/* CARDS */
-.cards-inner {
-  display: flex;
+/* SHARED 2-COLUMN LAYOUT */
+.cards-inner,
+.cta-inner {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
-  flex-wrap: wrap;
   align-items: stretch;
 }
 
-.cards-inner > .card {
-  flex: 1 1 calc(50% - 10px);
-  min-width: 0;
-}
-
+/* CARDS */
 .card {
   background: white;
-  width: 100%;
   padding: 35px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  min-width: 0;
 }
 
 .card ul {
@@ -195,22 +191,14 @@ section {
 }
 
 /* CTA */
-.cta-inner {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  align-items: stretch;
-}
-
 .cta-box {
-  flex: 1 1 calc(50% - 10px);
-  min-width: 0;
   padding: 35px;
   border-radius: 20px;
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-width: 0;
 }
 
 .light {
@@ -258,7 +246,7 @@ section {
 .fade.show {
   opacity: 1;
   transform: translateY(0);
-  transition: 0.8s;
+  transition: 0.8s ease;
 }
 
 @keyframes fadeUp {
@@ -312,14 +300,8 @@ section {
 
   .cards-inner,
   .cta-inner {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 20px;
-  }
-
-  .cards-inner > .card,
-  .cta-box {
-    flex: unset;
-    width: 100%;
   }
 
   .card li {
