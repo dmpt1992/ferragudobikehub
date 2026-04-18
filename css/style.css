@@ -1,0 +1,346 @@
+/* =========================================================
+   BIKE RENTALS ALGARVE — SUNSET STYLE
+   Warm • Premium • Conversion-focused
+   ========================================================= */
+
+:root{
+  --flow-dark:#1c1c1c;
+
+  --bg:#f7efe6;              /* areia quente */
+  --section-light:#fffaf5;   /* branco quente */
+  --section-warm:#f2e3d3;    /* areia sunset */
+  --section-accent:#e8c7a9;  /* pêssego suave */
+
+  --card:#ffffff;
+
+  --text:#1e1e1e;
+  --text-soft:rgba(30,30,30,.65);
+
+  --border:rgba(0,0,0,.10);
+  --shadow:0 20px 45px rgba(0,0,0,.10);
+
+  --accent:#c46a2b;
+}
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:"Montserrat", sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.5;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero{
+  position:relative;
+  min-height:90vh;
+  background:url("../img/bg.jpg") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  padding:40px 20px;
+  color:#fff;
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    rgba(120,60,20,0.55),   /* quente */
+    rgba(0,0,0,0.25)
+  );
+}
+
+.hero-inner{
+  position:relative;
+  z-index:2;
+  width:100%;
+}
+
+.hero-split{
+  max-width:1100px;
+  margin:auto;
+}
+
+.hero-left{
+  max-width:520px;
+}
+
+/* TYPO */
+
+.badge{
+  display:inline-block;
+  margin-bottom:15px;
+  font-size:12px;
+  letter-spacing:1.5px;
+  border:1px solid rgba(255,255,255,.5);
+  padding:6px 12px;
+  border-radius:999px;
+}
+
+h1{
+  font-size:56px;
+  line-height:1.05;
+  margin-bottom:15px;
+  font-weight:800;
+}
+
+.subtitle{
+  font-size:18px;
+  margin-bottom:25px;
+  font-weight:600;
+}
+
+.micro{
+  font-size:13px;
+  opacity:.9;
+  margin-top:10px;
+}
+
+/* CTA */
+
+.cta{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:10px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:16px 32px;
+  background:var(--flow-dark);
+  color:#fff;
+  text-decoration:none;
+  font-weight:800;
+  letter-spacing:1px;
+  border-radius:8px;
+  transition:.25s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+  background:#000;
+}
+
+.btn-outline{
+  background:transparent;
+  border:2px solid #fff;
+}
+
+.btn-outline:hover{
+  background:#fff;
+  color:#000;
+}
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.section{
+  padding:90px 20px;
+  background:var(--section-light);
+}
+
+.section.alt{
+  background:var(--section-warm);
+}
+
+/* 🌅 secção destaque */
+.section.sunset{
+  background:linear-gradient(
+    180deg,
+    #f7e6d5 0%,
+    #f0d2b8 100%
+  );
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+}
+
+h2{
+  font-size:34px;
+  margin-bottom:10px;
+  font-weight:800;
+  color:#2a1f18;
+}
+
+.lead{
+  font-size:15px;
+  margin-bottom:35px;
+  color:var(--text-soft);
+  font-weight:600;
+}
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.grid{
+  display:grid;
+  gap:18px;
+}
+
+.features{
+  grid-template-columns:repeat(4,1fr);
+}
+
+.bikes{
+  grid-template-columns:repeat(3,1fr);
+}
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.card{
+  background:var(--card);
+  padding:20px;
+  border-radius:14px;
+  border:1px solid var(--border);
+  transition:.25s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow);
+}
+
+.card h3{
+  font-size:14px;
+  margin-bottom:8px;
+  font-weight:800;
+}
+
+.card p{
+  font-size:13px;
+  color:var(--text-soft);
+}
+
+/* CENTER */
+
+.center{
+  text-align:center;
+  margin-top:25px;
+}
+
+/* =========================================================
+   ROUTE BOX
+   ========================================================= */
+
+.route-box{
+  background:#fff;
+  padding:22px;
+  border-radius:14px;
+  margin:25px auto;
+  max-width:700px;
+  box-shadow:var(--shadow);
+}
+
+.ticks{
+  list-style:none;
+  margin-top:10px;
+}
+
+.ticks li{
+  margin-bottom:8px;
+  font-size:13px;
+  padding-left:18px;
+  position:relative;
+}
+
+.ticks li::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  color:var(--flow-dark);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer{
+  padding:30px 20px;
+  border-top:1px solid var(--border);
+  background:rgba(255,255,255,.4);
+}
+
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.footer-brand{
+  font-weight:800;
+  font-size:13px;
+  margin-bottom:5px;
+}
+
+.footer-note{
+  font-size:12px;
+  color:var(--text-soft);
+}
+
+.footer-link{
+  text-decoration:none;
+  color:var(--flow-dark);
+  font-weight:700;
+  font-size:12px;
+  margin-left:10px;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media(max-width:980px){
+
+  h1{
+    font-size:42px;
+  }
+
+  .features{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .bikes{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+@media(max-width:520px){
+
+  .hero{
+    min-height:80vh;
+  }
+
+  h1{
+    font-size:32px;
+  }
+
+  .features,
+  .bikes{
+    grid-template-columns:1fr;
+  }
+
+  .btn{
+    width:100%;
+  }
+
+}
